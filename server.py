@@ -382,7 +382,7 @@ def launch(HandlerClass=ProxyRequestHandler, ServerClass=ThreadingHTTPServer, pr
     httpd.serve_forever()
 
 def start_test_server(HandlerClass, ServerClass):
-    server_address = ('::1', 8080)
+    server_address = ('', 8080)
     HandlerClass.protocol_version = "HTTP/1.1"
     httpd = ServerClass(server_address, HandlerClass)
     print "Serving Proxy server on ::1 port 8080"
